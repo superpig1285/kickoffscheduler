@@ -8,7 +8,7 @@ import { io } from "socket.io-client";
 function App() {
     const [count, setCount] = useState(0);
 
-    const socket = io("https://backend-summer-feather-325.fly.dev");
+    const socket = io("https://backend-summer-feather-325.fly.dev/3000");
 
     socket.on("connect", () => {
         console.log("Connected:", socket.id);

@@ -4,8 +4,30 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Calendar from "./Components/Calendar";
 import { io } from "socket.io-client";
+import { socket } from "./socket";
 
 function App() {
+    useEffect(() => {
+        let lastSent = 0;
+
+        const handleMove = (e) => {
+            const now = Date.now();
+
+            if (now - last < 30) return;
+            lastSent = now;
+
+            socket.emit("cursor", {
+                x: e.clientx,
+                y: e.clienty,
+                roomId: "schedule-123",
+                name: "Wilber",
+            });
+        };
+
+        window.addEventListener("mousemove", handleMove);
+        return () => window.removeEventListener("mousemove", handleMove);
+    }, []);
+
     const [count, setCount] = useState(0);
 
     const socket = io("https://backend-summer-feather-325.fly.dev/", {

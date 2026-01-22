@@ -33,7 +33,7 @@ io.on("connection", (socket) => {
             id: socket.id,
             ...cursor,
         });
-        console.log(cursor);
+        console.log(...cursor);
     });
 
     socket.on("disconnect", () => {

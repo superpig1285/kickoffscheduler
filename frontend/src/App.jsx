@@ -33,6 +33,10 @@ function App() {
     }, []);
 
     useEffect(() => {
+        socket.emit("join-room", "schedule-123");
+    }, []);
+
+    useEffect(() => {
         let lastSent = 0;
 
         const handleMove = (e) => {

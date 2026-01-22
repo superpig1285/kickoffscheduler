@@ -38,7 +38,7 @@ function App() {
         const handleMove = (e) => {
             const now = Date.now();
 
-            if (now - last < 30) return;
+            if (now - lastSent < 30) return;
             lastSent = now;
 
             socket.emit("cursor", {

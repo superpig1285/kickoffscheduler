@@ -7,6 +7,30 @@ import { io } from "socket.io-client";
 import { socket } from "./socket";
 
 function App() {
+    const [cursors, setCursors] = useState({});
+
+    useEffect(() => {
+        socket.on("cursor", (data) => {
+            setCursors((prev) => ({
+                ...prev,
+                [data.id]: data,
+            }));
+        });
+
+        socket.on("cursor-remove", (id) => {
+            setCursors((prev) => {
+                const copy = { ...prev };
+                delete copy[id];
+                return copy;
+            });
+        });
+
+        return () => {
+            socket.off("cursor");
+            socket.off("cursor-remove");
+        };
+    }, []);
+
     useEffect(() => {
         let lastSent = 0;
 
@@ -41,9 +65,24 @@ function App() {
 
     return (
         <>
-            <h1>I love you Julia Hope Boylan</h1>
+            <h1>Kickoff Scheduler</h1>
             <Calendar />
-            <h1>Wilber</h1>
+            {Object.values(cursors).map((cursor) => (
+                <div
+                    key={cursor.id}
+                    style={{
+                        position: "fixed",
+                        left: cursor.x,
+                        right: cursor.y,
+                        transform: "translate(-50%, 50%)",
+                        pointerEvents: "none",
+                        zIndex: 9999,
+                        color: cursor.color || "red",
+                    }}
+                >
+                    {cursor.name}
+                </div>
+            ))}
         </>
     );
 }

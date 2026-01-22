@@ -24,10 +24,14 @@ app.get("/", (req, res) => {
 io.on("connection", (socket) => {
     console.log("Connected:", socket.id);
 
-    socket.on("cursor", (data) => {
-        socket.broadcast.emit("cursor", {
+    socket.on("join-room", (roomId) => {
+        socket.join(roomId);
+    });
+
+    socket.on("cursor", ({ roomId, ...cursor }) => {
+        socket.to(roomId).emit("cursor", {
             id: socket.id,
-            ...data,
+            ...cursor,
         });
     });
 

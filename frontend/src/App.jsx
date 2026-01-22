@@ -55,7 +55,7 @@ function App() {
 
     const [count, setCount] = useState(0);
 
-    const socket = io("https://backend-summer-feather-325.fly.dev/3000", {
+    const socket = io("https://backend-summer-feather-325.fly.dev", {
         transports: ["websocket"],
         secure: true,
     });

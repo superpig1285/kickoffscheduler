@@ -68,7 +68,7 @@ function App() {
         console.log("Connected:", socket.id);
     });
 
-    socket.on("cursor", (data) => console.log("Cursor:", data));
+    socket.on("cursor", (data) => console.log("Cursor:", data.x));
 
     return (
         <>

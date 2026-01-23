@@ -61,10 +61,10 @@ function App() {
 
     return (
         <>
-            <button>
+            <button className="icon-button">
                 <img src={CreateNewRoomIcon} /> Create new room
             </button>
-            <button>
+            <button className="icon-button">
                 <img src={JoinRoomIcon} /> Join a room
             </button>
             <h1>Kickoff Scheduler</h1>

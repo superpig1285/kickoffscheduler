@@ -90,3 +90,12 @@
     cursor: default;
     background: transparent;
 }
+
+.icon-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    font-size: 14px;
+    line-height: 1;
+}

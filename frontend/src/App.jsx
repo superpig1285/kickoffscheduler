@@ -78,9 +78,12 @@ function App() {
                         borderRadius: "50%",
                         border: "2px solid #22c55e",
                         boxShadow: `
-      0 0 6px rgba(34,197,94,0.8),
-      0 0 12px rgba(34,197,94,0.6),
-      0 0 18px rgba(34,197,94,0.4)
+      0 0 4px rgba(22, 163, 74, 1),
+    0 0 10px rgba(22, 163, 74, 0.9),
+    0 0 20px rgba(22, 163, 74, 0.7),
+    0 0 35px rgba(22, 163, 74, 0.5),
+    0 0 55px rgba(22, 163, 74, 0.35);
+
     `,
                         pointerEvents: "none",
                     }}

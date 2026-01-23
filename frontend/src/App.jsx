@@ -6,8 +6,8 @@ import "./App.css";
 import Calendar from "./Components/Calendar";
 import { io } from "socket.io-client";
 import { socket } from "./socket";
-import createNewRoomIcon from "../public/plus.svg";
-import joinRoomIcon from "../public/open_door.svg";
+import CreateNewRoomIcon from "../public/plus.svg?react";
+import JoinRoomIcon from "../public/open_door.svg?react";
 
 function App() {
     const [cursors, setCursors] = useState({});
@@ -61,8 +61,14 @@ function App() {
 
     return (
         <>
-            <button> {createNewRoomIcon}Create new room</button>
-            <button>{joinRoomIcon}Join a room</button>
+            <button>
+                {" "}
+                <CreateNewRoomIcon /> Create new room
+            </button>
+            <button>
+                {" "}
+                <JoinRoomIcon /> Join a room
+            </button>
             <h1>Kickoff Scheduler</h1>
             <Calendar />
             {Object.values(cursors).map((cursor) => (

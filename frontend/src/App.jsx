@@ -46,8 +46,8 @@ function App() {
             lastSent = now;
 
             socket.emit("cursor", {
-                x: e.clientx,
-                y: e.clienty,
+                x: e.clientX,
+                y: e.clientY,
                 roomId: "schedule-123",
                 name: "Wilber",
             });
@@ -59,17 +59,6 @@ function App() {
 
     const [count, setCount] = useState(0);
 
-    const socket = io("https://backend-summer-feather-325.fly.dev", {
-        transports: ["websocket"],
-        secure: true,
-    });
-
-    socket.on("connect", () => {
-        console.log("Connected:", socket.id);
-    });
-
-    socket.on("cursor", (data) => console.log("Cursor:", data));
-
     return (
         <>
             <h1>Kickoff Scheduler</h1>
@@ -80,8 +69,8 @@ function App() {
                     style={{
                         position: "fixed",
                         left: cursor.x,
-                        right: cursor.y,
-                        transform: "translate(-50%, 50%)",
+                        top: cursor.y,
+                        transform: "translate(-50%, -50%)",
                         pointerEvents: "none",
                         zIndex: 9999,
                         color: cursor.color || "red",

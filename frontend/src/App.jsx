@@ -65,6 +65,7 @@ function App() {
                 <button className="icon-button">
                     <img src={CreateNewRoomIcon} /> Create new room
                 </button>
+                <div className="current-rooms-list"></div>
                 <button className="icon-button">
                     <img src={JoinRoomIcon} /> Join a room
                 </button>

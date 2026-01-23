@@ -102,4 +102,13 @@
 
 .room-selector {
     position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.current-rooms-list {
+    width: 100px;
+    height: 200px;
 }

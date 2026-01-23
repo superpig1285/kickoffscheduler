@@ -72,11 +72,19 @@ function App() {
                         pointerEvents: "none",
                         zIndex: 9999,
                         color: cursor.color || "red",
-                        outline: "5px dotted green",
+                        outline: "5px solid green",
+                        width: 24,
+                        height: 24,
+                        borderRadius: "50%",
+                        border: "2px solid #22c55e",
+                        boxShadow: `
+      0 0 6px rgba(34,197,94,0.8),
+      0 0 12px rgba(34,197,94,0.6),
+      0 0 18px rgba(34,197,94,0.4)
+    `,
+                        pointerEvents: "none",
                     }}
-                >
-                    * {cursor.name}
-                </div>
+                ></div>
             ))}
         </>
     );

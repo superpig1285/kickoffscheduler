@@ -74,7 +74,7 @@ function App() {
                         color: cursor.color || "red",
                     }}
                 >
-                    {cursor.name}
+                    * {cursor.name}
                 </div>
             ))}
         </>

@@ -69,7 +69,7 @@ function App() {
                 </button>
                 <div className="current-rooms-list"></div>
                 <button className="icon-button" onClick={() => setOpen((o) => !o)}>
-                    <img src={CreateNewRoomIcon} /> Create new room
+                    <img src={CreateNewRoomIcon} /> New room
                 </button>
                 <div className={`room-input-wrapper ${open ? "open" : ""}`}>
                     <input type="text" placeholder="Room Name" value={roomName} onChange={(e) => setRoomName(e.target.value)}></input>

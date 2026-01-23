@@ -74,6 +74,7 @@ function App() {
                 <div className={`room-input-wrapper ${open ? "open" : ""}`}>
                     <input type="text" placeholder="Room Name" value={roomName} onChange={(e) => setRoomName(e.target.value)}></input>
                 </div>
+                <button>Create</button>
             </div>
 
             <h1>Kickoff Scheduler</h1>

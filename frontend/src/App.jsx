@@ -11,6 +11,8 @@ import JoinRoomIcon from "../public/open_door.svg?react";
 
 function App() {
     const [cursors, setCursors] = useState({});
+    const [open, setOpen] = useState(false);
+    const [roomName, setRoomName] = useState("");
 
     useEffect(() => {
         socket.emit("join-room", "schedule-123");
@@ -63,12 +65,15 @@ function App() {
         <>
             <div className="room-selector">
                 <button className="icon-button">
-                    <img src={CreateNewRoomIcon} /> Create new room
-                </button>
-                <div className="current-rooms-list"></div>
-                <button className="icon-button">
                     <img src={JoinRoomIcon} /> Join a room
                 </button>
+                <div className="current-rooms-list"></div>
+                <button className="icon-button" onClick={() => setOpen((o) => !o)}>
+                    <img src={CreateNewRoomIcon} /> Create new room
+                </button>
+                <div className={'room-input-wrapper ${open ? "open" : ""}'}>
+                    <input type="text" placeholder="Room Name" value="roomName" onChange={(e) => setRoomName(e.target.value)}></input>
+                </div>
             </div>
 
             <h1>Kickoff Scheduler</h1>

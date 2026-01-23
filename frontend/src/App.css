@@ -99,3 +99,7 @@
     font-size: 14px;
     line-height: 1;
 }
+
+.room-selector {
+    position: fixed;
+}

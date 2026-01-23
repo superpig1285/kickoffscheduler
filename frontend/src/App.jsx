@@ -61,12 +61,15 @@ function App() {
 
     return (
         <>
-            <button className="icon-button">
-                <img src={CreateNewRoomIcon} /> Create new room
-            </button>
-            <button className="icon-button">
-                <img src={JoinRoomIcon} /> Join a room
-            </button>
+            <div className="room-selector">
+                <button className="icon-button">
+                    <img src={CreateNewRoomIcon} /> Create new room
+                </button>
+                <button className="icon-button">
+                    <img src={JoinRoomIcon} /> Join a room
+                </button>
+            </div>
+
             <h1>Kickoff Scheduler</h1>
             <Calendar />
             {Object.values(cursors).map((cursor) => (

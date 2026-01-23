@@ -11,6 +11,8 @@ function App() {
     const [cursors, setCursors] = useState({});
 
     useEffect(() => {
+        socket.emit("join-room", "schedule-123");
+
         socket.on("cursor", (data) => {
             setCursors((prev) => ({
                 ...prev,
@@ -32,9 +34,7 @@ function App() {
         };
     }, []);
 
-    useEffect(() => {
-        socket.emit("join-room", "schedule-123");
-    }, []);
+    useEffect(() => {}, []);
 
     useEffect(() => {
         let lastSent = 0;
@@ -56,8 +56,6 @@ function App() {
         window.addEventListener("mousemove", handleMove);
         return () => window.removeEventListener("mousemove", handleMove);
     }, []);
-
-    const [count, setCount] = useState(0);
 
     return (
         <>

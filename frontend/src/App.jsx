@@ -59,6 +59,8 @@ function App() {
 
     return (
         <>
+            <button>Create a room</button>
+            <button>Join a room</button>
             <h1>Kickoff Scheduler</h1>
             <Calendar />
             {Object.values(cursors).map((cursor) => (

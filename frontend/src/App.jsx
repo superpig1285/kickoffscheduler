@@ -72,6 +72,7 @@ function App() {
                         pointerEvents: "none",
                         zIndex: 9999,
                         color: cursor.color || "red",
+                        outline: "5px dotted green",
                     }}
                 >
                     * {cursor.name}

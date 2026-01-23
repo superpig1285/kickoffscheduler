@@ -59,7 +59,7 @@ function App() {
 
     return (
         <>
-            <button>Create a room</button>
+            <button> + Create new room</button>
             <button>Join a room</button>
             <h1>Kickoff Scheduler</h1>
             <Calendar />

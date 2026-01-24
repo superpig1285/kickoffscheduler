@@ -177,5 +177,5 @@
 input {
     background-color: #ffffff;
     border-radius: 8px;
-    border-color: #f7f7f7aa;
+    border: 2px solid rgb(241, 241, 241);
 }

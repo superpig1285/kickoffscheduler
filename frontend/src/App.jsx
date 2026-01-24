@@ -82,9 +82,20 @@ function App() {
                     <img src={CreateNewRoomIcon} /> New room
                 </button>
                 <div className={`room-input-wrapper ${openCreate ? "open" : ""}`}>
-                    <input type="text" placeholder="Room Name" value={roomName} onChange={(e) => setRoomName(e.target.value)}></input>
+                    <input
+                        name="room_name"
+                        type="text"
+                        placeholder="Room Name"
+                        value={roomName}
+                        onChange={(e) => setRoomName(e.target.value)}
+                    ></input>
                     <label>
-                        <input type="checkbox" checked={checked} onChange={(e) => setChecked(e.target.checked)}></input>
+                        <input
+                            name="require_password"
+                            type="checkbox"
+                            checked={checked}
+                            onChange={(e) => setChecked(e.target.checked)}
+                        ></input>
                         Require Password
                     </label>
                 </div>

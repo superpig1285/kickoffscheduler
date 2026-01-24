@@ -199,3 +199,10 @@ input {
 ul {
     padding-left: 10px;
 }
+
+.room-list-header {
+    list-style: none;
+    color: #c7c5c5;
+    display: flex;
+    justify-content: space-between;
+}

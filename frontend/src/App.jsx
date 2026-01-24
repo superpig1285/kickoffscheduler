@@ -72,8 +72,8 @@ function App() {
                     <img src={JoinRoomIcon} /> Join a room
                 </button>
                 <div className={`search-room-input-wrapper ${openSearch ? "open" : ""}`}>
-                    <div className="current-rooms-list"></div>
                     <input type="text" placeholder="Search" value={searchText} onChange={(e) => setSearchText(e.target.value)}></input>
+                    <div className="current-rooms-list"></div>
                 </div>
 
                 <button className="icon-button" onClick={() => setOpenCreate((o) => !o)}>

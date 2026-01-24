@@ -101,8 +101,10 @@ function App() {
                                 <div>Members</div>
                             </li>
                             {rooms.map((room) => (
-                                <li className="room-list-object" key={room.id}>
-                                    {room}
+                                <li className="room-list-object" key={room.roomId}>
+                                    {room.name}
+                                    {room.owner}
+                                    {room.members}
                                 </li>
                             ))}
                         </ul>

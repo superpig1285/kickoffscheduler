@@ -5,7 +5,10 @@ const cors = require("cors");
 
 const app = express();
 const server = http.createServer(app);
-const roomList = ["test room 1", "test room 2"];
+const roomList = [
+    { roomId: "1001", name: "Test room 1", members: 3, owner: "admin" },
+    { roomId: "1002", name: "Test room 2", members: 5, owner: "admin" },
+];
 
 const io = new Server(server, {
     cors: {

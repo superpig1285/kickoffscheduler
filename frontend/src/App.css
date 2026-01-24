@@ -135,7 +135,7 @@
     transform: translateY(-200px);
     transition:
         max-height 250ms ease,
-        opacity 200ms ease,
+        opacity 400ms ease,
         transform 200ms ease;
 }
 

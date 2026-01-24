@@ -11,7 +11,7 @@ import JoinRoomIcon from "../public/open_door.svg?react";
 
 function App() {
     const [cursors, setCursors] = useState({});
-    const [open, setOpen] = useState(false);
+    const [openCreate, setOpenCreate] = useState(false);
     const [roomName, setRoomName] = useState("");
 
     useEffect(() => {
@@ -70,13 +70,13 @@ function App() {
                     <img src={JoinRoomIcon} /> Join a room
                 </button>
                 <div className="current-rooms-list"></div>
-                <button className="icon-button" onClick={() => setOpen((o) => !o)}>
+                <button className="icon-button" onClick={() => setOpenCreate((o) => !o)}>
                     <img src={CreateNewRoomIcon} /> New room
                 </button>
-                <div className={`room-input-wrapper ${open ? "open" : ""}`}>
+                <div className={`room-input-wrapper ${openCreate ? "open" : ""}`}>
                     <input type="text" placeholder="Room Name" value={roomName} onChange={(e) => setRoomName(e.target.value)}></input>
                 </div>
-                {open && roomName != "" && <button>Create</button>}
+                {openCreate && roomName != "" && <button>Create</button>}
             </div>
 
             <Calendar />

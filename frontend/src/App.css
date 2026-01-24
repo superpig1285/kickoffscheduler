@@ -188,3 +188,10 @@ input {
     line-height: 1;
     background-color: rgb(244, 218, 248);
 }
+
+.room-list-object {
+    list-style: none;
+    border-top: solid 1px rgb(230, 230, 230);
+    border-bottom: solid 1px rgb(230, 230, 230);
+    text-align: left;
+}

@@ -202,7 +202,9 @@ ul {
 
 .room-list-header {
     list-style: none;
-    color: #c7c5c5;
+    color: rgb(158, 157, 157);
+    font-size: 5px;
     display: flex;
     justify-content: space-between;
+    border-bottom: solid 1px rgb(158, 157, 157);
 }

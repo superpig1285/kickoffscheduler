@@ -134,8 +134,8 @@
     opacity: 0;
     transform: translateY(-200px);
     transition:
-        max-height 1000ms ease,
-        opacity 500ms ease,
+        max-height 250ms ease,
+        opacity 200ms ease,
         transform 200ms ease;
 }
 
@@ -171,5 +171,5 @@
 
 .title {
     margin: 0;
-    margin-bottom: 300px;
+    margin-bottom: 50px;
 }

@@ -136,7 +136,7 @@
     transition:
         max-height 250ms ease,
         opacity 400ms ease,
-        transform 400ms ease;
+        transform 400ms ease-out;
 }
 
 .search-room-input-wrapper.open {

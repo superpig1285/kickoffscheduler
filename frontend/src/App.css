@@ -103,9 +103,9 @@
 }
 
 .current-rooms-list {
-    width: 100px;
+    width: 100%;
     height: 200px;
-    color: #888;
+    background-color: #888;
     border-radius: 4px;
 }
 

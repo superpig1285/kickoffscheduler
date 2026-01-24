@@ -181,9 +181,10 @@ input {
 }
 
 .create-room-button {
+    margin-top: 10px;
     gap: 6px;
     padding: 6px 10px;
     font-size: 14px;
     line-height: 1;
-    background-color: rgb(248, 191, 255);
+    background-color: rgb(244, 218, 248);
 }

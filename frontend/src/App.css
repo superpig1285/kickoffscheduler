@@ -98,7 +98,7 @@
     padding: 6px 10px;
     font-size: 14px;
     line-height: 1;
-    width: fit-content;
+    width: max-content;
 }
 
 .current-rooms-list {

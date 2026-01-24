@@ -123,7 +123,7 @@
 }
 
 .room-input-wrapper.open {
-    max-height: 60px; /* must be >= input height */
+    max-height: fit-content; /* must be >= input height */
     opacity: 1;
     transform: translateY(0);
 }

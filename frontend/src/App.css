@@ -132,7 +132,7 @@
     overflow: hidden;
     max-height: 0;
     opacity: 0;
-    transform: translateY(-200px);
+    transform: translateY(-6px);
     transition:
         max-height 250ms ease,
         opacity 400ms ease,

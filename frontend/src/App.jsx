@@ -15,6 +15,7 @@ function App() {
     const [openSearch, setOpenSearch] = useState(false);
     const [roomName, setRoomName] = useState("");
     const [searchText, setSearchText] = useState("");
+    const [checked, setChecked] = useState(false);
 
     useEffect(() => {
         socket.emit("join-room", "schedule-123");
@@ -82,6 +83,9 @@ function App() {
                 </button>
                 <div className={`room-input-wrapper ${openCreate ? "open" : ""}`}>
                     <input type="text" placeholder="Room Name" value={roomName} onChange={(e) => setRoomName(e.target.value)}></input>
+                    <label>
+                        <input type="checkbox" checked={checked} onChange={(e) => setChecked(e.target.checked)}></input>
+                    </label>
                 </div>
                 {openCreate && roomName != "" && <button className="create-room-button">Create</button>}
             </div>

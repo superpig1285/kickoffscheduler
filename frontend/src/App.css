@@ -123,6 +123,22 @@
     transform: translateY(0);
 }
 
+.search-room-input-wrapper {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition:
+        max-height 250ms ease,
+        opacity 200ms ease,
+        transform 200ms ease;
+}
+
+.search-room-input-wrapper.open {
+    max-height: 200px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .room-input-wrapper input {
     width: 100%;
     margin-top: 8px;

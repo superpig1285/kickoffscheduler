@@ -12,7 +12,9 @@ import JoinRoomIcon from "../public/open_door.svg?react";
 function App() {
     const [cursors, setCursors] = useState({});
     const [openCreate, setOpenCreate] = useState(false);
+    const [openSearch, setOpenSearch] = useState(flase);
     const [roomName, setRoomName] = useState("");
+    const [searchText, setSearchText] = useState("");
 
     useEffect(() => {
         socket.emit("join-room", "schedule-123");
@@ -66,10 +68,14 @@ function App() {
             <div className="upper_left_controls_and_title_container">
                 <h2 className="title">Kickoff Scheduler</h2>
 
-                <button className="icon-button">
+                <button className="icon-button" onClick={() => setOpenSearch((o) => !o)}>
                     <img src={JoinRoomIcon} /> Join a room
                 </button>
-                <div className="current-rooms-list"></div>
+                <div className={`search-room-input-wrapper ${openSearch ? "open" : ""}`}>
+                    <div className="current-rooms-list"></div>
+                    <input type="text" placeholder="Search" value={searchText} onChange={(e) => setSearchText(e.target.value)}></input>
+                </div>
+
                 <button className="icon-button" onClick={() => setOpenCreate((o) => !o)}>
                     <img src={CreateNewRoomIcon} /> New room
                 </button>

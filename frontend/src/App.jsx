@@ -63,6 +63,7 @@ function App() {
 
     return (
         <>
+            <h3 className="title">Kickoff Scheduler</h3>
             <div className="room-selector">
                 <button className="icon-button">
                     <img src={JoinRoomIcon} /> Join a room
@@ -77,7 +78,6 @@ function App() {
                 {open && roomName != "" && <button>Create</button>}
             </div>
 
-            <h1 className="title">Kickoff Scheduler</h1>
             <Calendar />
             {Object.values(cursors).map((cursor) => (
                 <div

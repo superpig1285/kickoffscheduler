@@ -23,7 +23,7 @@ function App() {
     useEffect(() => {
         const loadRooms = async () => {
             try {
-                const res = await fetch("http://localhost:3000/rooms");
+                const res = await fetch("https://backend-summer-feather-325.fly.dev/roomList");
                 if (!res.ok) throw new Error("Failed to fetch rooms");
                 const data = await res.json();
                 setRooms(data);

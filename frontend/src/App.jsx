@@ -97,7 +97,7 @@ function App() {
                         <input type="text" placeholder="Search" value={searchText} onChange={(e) => setSearchText(e.target.value)}></input>
                         <ul>
                             <li className="room-list-header">
-                                <div>Name</div>
+                                <div>Room Name</div>
                                 <div>Members</div>
                             </li>
                             {rooms.map((room) => (

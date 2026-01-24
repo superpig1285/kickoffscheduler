@@ -85,6 +85,7 @@ function App() {
                     <input type="text" placeholder="Room Name" value={roomName} onChange={(e) => setRoomName(e.target.value)}></input>
                     <label>
                         <input type="checkbox" checked={checked} onChange={(e) => setChecked(e.target.checked)}></input>
+                        Require Password
                     </label>
                 </div>
                 {openCreate && roomName != "" && <button className="create-room-button">Create</button>}

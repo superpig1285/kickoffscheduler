@@ -203,8 +203,13 @@ ul {
 .room-list-header {
     list-style: none;
     color: rgb(158, 157, 157);
-    font-size: 5px;
+    font-size: 10px;
     display: flex;
     justify-content: space-between;
     border-bottom: solid 1px rgb(158, 157, 157);
+}
+
+.room-list-header div {
+    padding-left: 5px;
+    padding-right: 5px;
 }

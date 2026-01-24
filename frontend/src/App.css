@@ -135,8 +135,8 @@
     transform: translateY(-30px);
     transition:
         max-height 250ms ease,
-        opacity 400ms ease,
-        transform 400ms ease-out;
+        opacity 200ms ease,
+        transform 200ms ease-out;
 }
 
 .search-room-input-wrapper.open {

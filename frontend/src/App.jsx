@@ -83,7 +83,7 @@ function App() {
                 <div className={`room-input-wrapper ${openCreate ? "open" : ""}`}>
                     <input type="text" placeholder="Room Name" value={roomName} onChange={(e) => setRoomName(e.target.value)}></input>
                 </div>
-                {openCreate && roomName != "" && <button className="icon-button">Create</button>}
+                {openCreate && roomName != "" && <button className="create-room-button">Create</button>}
             </div>
 
             <Calendar />

@@ -179,3 +179,11 @@ input {
     border-radius: 8px;
     border: 2px solid rgb(241, 241, 241);
 }
+
+.create-room-button {
+    gap: 6px;
+    padding: 6px 10px;
+    font-size: 14px;
+    line-height: 1;
+    background-color: rgb(248, 191, 255);
+}

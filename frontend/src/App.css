@@ -173,3 +173,7 @@
     margin: 0;
     margin-bottom: 50px;
 }
+
+input {
+    background-color: #f4f4f4aa;
+}

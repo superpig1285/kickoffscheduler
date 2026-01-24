@@ -16,6 +16,26 @@ function App() {
     const [roomName, setRoomName] = useState("");
     const [searchText, setSearchText] = useState("");
     const [checked, setChecked] = useState(false);
+    const [rooms, setRooms] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const loadRooms = async () => {
+            try {
+                const res = await fetch("http://localhost:3000/rooms");
+                if (!res.ok) throw new Error("Failed to fetch rooms");
+                const data = await res.json();
+                setRooms(data);
+            } catch (err) {
+                setError(err.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        loadRooms();
+    }, []);
 
     useEffect(() => {
         socket.emit("join-room", "schedule-123");
@@ -75,6 +95,11 @@ function App() {
                 <div className={`search-room-input-wrapper ${openSearch ? "open" : ""}`}>
                     <div className="current-rooms-list">
                         <input type="text" placeholder="Search" value={searchText} onChange={(e) => setSearchText(e.target.value)}></input>
+                        <ul>
+                            {rooms.map((room) => (
+                                <li key={room.id}>{room.name}</li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
 

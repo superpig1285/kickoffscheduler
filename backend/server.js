@@ -5,6 +5,7 @@ const cors = require("cors");
 
 const app = express();
 const server = http.createServer(app);
+const roomList = ["test room 1", "test room 2"];
 
 const io = new Server(server, {
     cors: {
@@ -19,6 +20,10 @@ app.use(express.json());
 
 app.get("/", (req, res) => {
     res.send("backend running");
+});
+
+app.get("/roomlist", (req, res) => {
+    res.send(roomList);
 });
 
 io.on("connection", (socket) => {

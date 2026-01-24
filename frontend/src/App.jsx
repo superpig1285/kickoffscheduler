@@ -77,7 +77,7 @@ function App() {
                 {open && roomName != "" && <button>Create</button>}
             </div>
 
-            <h1>Kickoff Scheduler</h1>
+            <h1 className="title">Kickoff Scheduler</h1>
             <Calendar />
             {Object.values(cursors).map((cursor) => (
                 <div

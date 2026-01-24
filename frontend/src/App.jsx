@@ -12,7 +12,7 @@ import JoinRoomIcon from "../public/open_door.svg?react";
 function App() {
     const [cursors, setCursors] = useState({});
     const [openCreate, setOpenCreate] = useState(false);
-    const [openSearch, setOpenSearch] = useState(flase);
+    const [openSearch, setOpenSearch] = useState(false);
     const [roomName, setRoomName] = useState("");
     const [searchText, setSearchText] = useState("");
 

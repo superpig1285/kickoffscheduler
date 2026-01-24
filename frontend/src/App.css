@@ -132,11 +132,11 @@
     overflow: hidden;
     max-height: 0;
     opacity: 0;
-    transform: translateY(-6px);
+    transform: translateY(-30px);
     transition:
         max-height 250ms ease,
         opacity 400ms ease,
-        transform 200ms ease;
+        transform 400ms ease;
 }
 
 .search-room-input-wrapper.open {

@@ -96,6 +96,10 @@ function App() {
                     <div className="current-rooms-list">
                         <input type="text" placeholder="Search" value={searchText} onChange={(e) => setSearchText(e.target.value)}></input>
                         <ul>
+                            <li className="room-list-header">
+                                <p>Name</p>
+                                <p>Members</p>
+                            </li>
                             {rooms.map((room) => (
                                 <li className="room-list-object" key={room.id}>
                                     {room}

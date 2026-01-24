@@ -63,19 +63,21 @@ function App() {
 
     return (
         <>
-            <h3 className="title">Kickoff Scheduler</h3>
-            <div className="room-selector">
-                <button className="icon-button">
-                    <img src={JoinRoomIcon} /> Join a room
-                </button>
-                <div className="current-rooms-list"></div>
-                <button className="icon-button" onClick={() => setOpen((o) => !o)}>
-                    <img src={CreateNewRoomIcon} /> New room
-                </button>
-                <div className={`room-input-wrapper ${open ? "open" : ""}`}>
-                    <input type="text" placeholder="Room Name" value={roomName} onChange={(e) => setRoomName(e.target.value)}></input>
+            <div className="upper_left_controls_and_title_container">
+                <h2 className="title">Kickoff Scheduler</h2>
+                <div className="room-selector">
+                    <button className="icon-button">
+                        <img src={JoinRoomIcon} /> Join a room
+                    </button>
+                    <div className="current-rooms-list"></div>
+                    <button className="icon-button" onClick={() => setOpen((o) => !o)}>
+                        <img src={CreateNewRoomIcon} /> New room
+                    </button>
+                    <div className={`room-input-wrapper ${open ? "open" : ""}`}>
+                        <input type="text" placeholder="Room Name" value={roomName} onChange={(e) => setRoomName(e.target.value)}></input>
+                    </div>
+                    {open && roomName != "" && <button>Create</button>}
                 </div>
-                {open && roomName != "" && <button>Create</button>}
             </div>
 
             <Calendar />

@@ -1,3 +1,5 @@
+import JoinRoomIcon from "../../public/open_door.svg?react";
+
 function JoinRoomDropDownMenu({ openSearch, setOpenSearch, searchText, setSearchText, rooms }) {
     return (
         <>

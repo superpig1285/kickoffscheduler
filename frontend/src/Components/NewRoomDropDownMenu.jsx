@@ -1,4 +1,4 @@
-import CreateNewRoomIcon from "../public/plus.svg?react";
+import CreateNewRoomIcon from "../../public/plus.svg?react";
 
 function NewRoomDropDownMenu({
     openCreate,

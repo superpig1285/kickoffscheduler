@@ -133,13 +133,15 @@ function App() {
                         ></input>
                         Require Password
                     </label>
-                    <input
-                        name="create_room_password"
-                        type="text"
-                        placeholder="Password"
-                        value={newRoomPassword}
-                        onChange={(e) => setNewRoomPassword(e.target.value)}
-                    ></input>
+                    {checked && (
+                        <input
+                            name="create_room_password"
+                            type="text"
+                            placeholder="Password"
+                            value={newRoomPassword}
+                            onChange={(e) => setNewRoomPassword(e.target.value)}
+                        ></input>
+                    )}
                 </div>
                 {openCreate && newRoomName != "" && <button className="create-room-button">Create</button>}
             </div>

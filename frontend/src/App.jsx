@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { useEffect } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+
 import "./App.css";
 import Calendar from "./Components/Calendar";
 import { io } from "socket.io-client";
 import { socket } from "./socket";
-import CreateNewRoomIcon from "../public/plus.svg?react";
-import JoinRoomIcon from "../public/open_door.svg?react";
+
+import JoinRoomDropdownMenu from "./Components/JoinRoomDropdownMenu";
+import NewRoomDropDownMenu from "./Components/NewRoomDropDownMenu";
 
 function App() {
     const [cursors, setCursors] = useState({});
@@ -88,62 +88,23 @@ function App() {
     return (
         <>
             <div className="upper_left_controls_and_title_container">
-                <h2 className="title">Kickoff Scheduler</h2>
-
-                <button className="icon-button" onClick={() => setOpenSearch((o) => !o)}>
-                    <img src={JoinRoomIcon} /> Join a room
-                </button>
-                <div className={`search-room-input-wrapper ${openSearch ? "open" : ""}`}>
-                    <div className="current-rooms-list">
-                        <input type="text" placeholder="Search" value={searchText} onChange={(e) => setSearchText(e.target.value)}></input>
-                        <ul>
-                            <li className="room-list-header">
-                                <div>Room Name</div>
-                                <div>Owner</div>
-                                <div>Members</div>
-                            </li>
-                            {rooms.map((room) => (
-                                <li className="room-list-object" key={room.roomId}>
-                                    {room.name}
-                                    {room.owner}
-                                    {room.members}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-
-                <button className="icon-button" onClick={() => setOpenCreate((o) => !o)}>
-                    <img src={CreateNewRoomIcon} /> New room
-                </button>
-                <div className={`room-input-wrapper ${openCreate ? "open" : ""}`}>
-                    <input
-                        name="room_name"
-                        type="text"
-                        placeholder="Name"
-                        value={newRoomName}
-                        onChange={(e) => setNewRoomName(e.target.value)}
-                    ></input>
-                    <label>
-                        <input
-                            name="require_password"
-                            type="checkbox"
-                            checked={checked}
-                            onChange={(e) => setChecked(e.target.checked)}
-                        ></input>
-                        Require Password
-                    </label>
-                    {checked && (
-                        <input
-                            name="create_room_password"
-                            type="text"
-                            placeholder="Password"
-                            value={newRoomPassword}
-                            onChange={(e) => setNewRoomPassword(e.target.value)}
-                        ></input>
-                    )}
-                </div>
-                {openCreate && newRoomName != "" && <button className="create-room-button">Create</button>}
+                <JoinRoomDropdownMenu
+                    openSearch={openSearch}
+                    setOpenSearch={setOpenSearch}
+                    searchText={searchText}
+                    setSearchText={setSearchText}
+                    rooms={rooms}
+                ></JoinRoomDropdownMenu>
+                <NewRoomDropDownMenu
+                    openCreate={openCreate}
+                    setOpenCreate={setOpenCreate}
+                    newRoomName={newRoomName}
+                    setNewRoomName={setNewRoomName}
+                    checked={checked}
+                    setChecked={setChecked}
+                    newRoomPassword={newRoomPassword}
+                    setNewRoomPassword={setNewRoomPassword}
+                ></NewRoomDropDownMenu>
             </div>
 
             <Calendar />

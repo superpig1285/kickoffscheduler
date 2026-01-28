@@ -13,12 +13,13 @@ function App() {
     const [cursors, setCursors] = useState({});
     const [openCreate, setOpenCreate] = useState(false);
     const [openSearch, setOpenSearch] = useState(false);
-    const [roomName, setRoomName] = useState("");
+    const [newRoomName, setNewRoomName] = useState("");
     const [searchText, setSearchText] = useState("");
     const [checked, setChecked] = useState(false);
     const [rooms, setRooms] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [newRoomPassword, setNewRoomPassword] = useState("");
 
     useEffect(() => {
         const loadRooms = async () => {
@@ -98,6 +99,7 @@ function App() {
                         <ul>
                             <li className="room-list-header">
                                 <div>Room Name</div>
+                                <div>Owner</div>
                                 <div>Members</div>
                             </li>
                             {rooms.map((room) => (
@@ -118,9 +120,9 @@ function App() {
                     <input
                         name="room_name"
                         type="text"
-                        placeholder="Room Name"
-                        value={roomName}
-                        onChange={(e) => setRoomName(e.target.value)}
+                        placeholder="Name"
+                        value={newRoomName}
+                        onChange={(e) => setNewRoomName(e.target.value)}
                     ></input>
                     <label>
                         <input
@@ -131,8 +133,15 @@ function App() {
                         ></input>
                         Require Password
                     </label>
+                    <input
+                        name="create_room_password"
+                        type="text"
+                        placeholder="Password"
+                        value={newRoomPassword}
+                        onChange={(e) => setNewRoomPassword(e.target.value)}
+                    ></input>
                 </div>
-                {openCreate && roomName != "" && <button className="create-room-button">Create</button>}
+                {openCreate && newRoomName != "" && <button className="create-room-button">Create</button>}
             </div>
 
             <Calendar />

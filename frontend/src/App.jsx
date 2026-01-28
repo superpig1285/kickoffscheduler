@@ -87,6 +87,8 @@ function App() {
 
     return (
         <>
+            <h2 className="title">Kickoff Scheduler</h2>
+
             <div className="upper_left_controls_and_title_container">
                 <JoinRoomDropdownMenu
                     openSearch={openSearch}

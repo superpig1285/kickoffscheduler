@@ -12,8 +12,6 @@ function NewRoomDropDownMenu({
 }) {
     return (
         <>
-            <h2 className="title">Kickoff Scheduler</h2>
-
             <button className="icon-button" onClick={() => setOpenCreate((o) => !o)}>
                 <img src={CreateNewRoomIcon} /> New room
             </button>

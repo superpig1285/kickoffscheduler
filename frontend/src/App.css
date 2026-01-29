@@ -148,6 +148,7 @@
 }
 
 .create-new-room-password {
+    margin: 7px;
     overflow: hidden;
     max-height: 0;
     opacity: 0;
@@ -155,6 +156,7 @@
 }
 
 .create-new-room-password.open {
+    margin: 7px;
     opacity: 1;
     background-color: #ffffff;
     border-radius: 8px;

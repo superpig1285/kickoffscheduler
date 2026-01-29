@@ -27,15 +27,15 @@ function NewRoomDropDownMenu({
                     <input name="require_password" type="checkbox" checked={checked} onChange={(e) => setChecked(e.target.checked)}></input>
                     Require Password
                 </label>
-                {checked && (
-                    <input
-                        name="create_room_password"
-                        type="text"
-                        placeholder="Password"
-                        value={newRoomPassword}
-                        onChange={(e) => setNewRoomPassword(e.target.value)}
-                    ></input>
-                )}
+                <input
+                    className={`create-new-room-password ${checked && openCreate ? "open" : ""}`}
+                    name="create_room_password"
+                    type="text"
+                    placeholder="Password"
+                    value={newRoomPassword}
+                    onChange={(e) => setNewRoomPassword(e.target.value)}
+                ></input>
+
                 <button className={`create-room-button ${newRoomName != "" ? "open" : ""}`}>Create Room</button>
             </div>
         </>

@@ -225,6 +225,10 @@ input {
     display: flex;
 }
 
+.password-required-field input {
+    display: inline;
+}
+
 ul {
     padding-left: 10px;
 }

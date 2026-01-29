@@ -144,6 +144,7 @@
     font-size: 14px;
     line-height: 1;
     background-color: rgb(244, 218, 248);
+    max-height: fit-content;
 }
 .search-room-input-wrapper {
     overflow: hidden;

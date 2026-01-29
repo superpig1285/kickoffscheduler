@@ -227,6 +227,7 @@ input {
 
 .password-required-field input {
     display: inline;
+    width: 5px;
 }
 
 ul {

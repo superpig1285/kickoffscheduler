@@ -135,6 +135,7 @@
     font-size: 14px;
     background-color: rgb(244, 218, 248);
     max-height: fit-content;
+    color: rgb(162, 161, 161);
 }
 .create-room-button.active {
     filter: saturate(100%);
@@ -144,6 +145,7 @@
     line-height: 1;
     background-color: rgb(244, 218, 248);
     max-height: fit-content;
+    color: black;
 }
 
 .create-new-room-password {
@@ -198,7 +200,7 @@
     padding: 20px;
     padding-top: 10px;
     text-align: left;
-    max-width: 10%;
+    max-width: 250px;
 }
 
 .title {

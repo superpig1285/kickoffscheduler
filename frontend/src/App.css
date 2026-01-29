@@ -127,7 +127,24 @@
     opacity: 1;
     transform: translateY(0);
 }
+.create-room-button {
+    margin-top: 10px;
+    gap: 6px;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
 
+    line-height: 1;
+    background-color: rgb(244, 218, 248);
+}
+.create-room-button.open {
+    margin-top: 10px;
+    gap: 6px;
+    padding: 6px 10px;
+    font-size: 14px;
+    line-height: 1;
+    background-color: rgb(244, 218, 248);
+}
 .search-room-input-wrapper {
     overflow: hidden;
     max-height: 0;
@@ -178,15 +195,6 @@ input {
     background-color: #ffffff;
     border-radius: 8px;
     border: 2px solid rgb(241, 241, 241);
-}
-
-.create-room-button {
-    margin-top: 10px;
-    gap: 6px;
-    padding: 6px 10px;
-    font-size: 14px;
-    line-height: 1;
-    background-color: rgb(244, 218, 248);
 }
 
 .room-list-object {

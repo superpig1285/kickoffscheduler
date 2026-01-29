@@ -218,7 +218,11 @@ input {
     list-style: none;
     border-bottom: solid 1px rgb(230, 230, 230);
     text-align: left;
-    color: #a7a6a6;
+    color: #000000;
+}
+
+.password-required-field {
+    display: flex;
 }
 
 ul {

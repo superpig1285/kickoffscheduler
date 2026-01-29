@@ -23,7 +23,7 @@ function NewRoomDropDownMenu({
                     value={newRoomName}
                     onChange={(e) => setNewRoomName(e.target.value)}
                 ></input>
-                <label>
+                <label className="password-required-field">
                     <input name="require_password" type="checkbox" checked={checked} onChange={(e) => setChecked(e.target.checked)}></input>
                     Require Password
                 </label>

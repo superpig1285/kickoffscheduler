@@ -128,7 +128,6 @@
     transform: translateY(0);
 }
 .create-room-button {
-    margin-top: 10px;
     gap: 6px;
     filter: saturate(20%);
     line-height: 1;
@@ -139,7 +138,7 @@
 }
 .create-room-button.active {
     filter: saturate(100%);
-    margin-top: 10px;
+
     gap: 6px;
     font-size: 14px;
     line-height: 1;

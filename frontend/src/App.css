@@ -130,15 +130,13 @@
 .create-room-button {
     margin-top: 10px;
     gap: 6px;
-    overflow: hidden;
-    max-height: 0;
-    opacity: 0;
-
+    filter: saturate(50%);
     line-height: 1;
     background-color: rgb(244, 218, 248);
+    max-height: fit-content;
 }
-.create-room-button.open {
-    opacity: 1;
+.create-room-button.active {
+    filter: saturate(100%);
     margin-top: 10px;
     gap: 6px;
     padding: 6px 10px;

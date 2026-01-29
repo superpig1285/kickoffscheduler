@@ -37,10 +37,6 @@ function NewRoomDropDownMenu({
                     ></input>
                 )}
                 <button className={`create-room-button ${newRoomName != "" ? "open" : ""}`}>Create Room</button>
-
-                {checked
-                    ? openCreate && newRoomName != "" && newRoomPassword != "" && <button className="create-room-button ">Create</button>
-                    : openCreate && newRoomName != "" && <button className="create-room-button">Create</button>}
             </div>
         </>
     );

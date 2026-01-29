@@ -36,7 +36,9 @@ function NewRoomDropDownMenu({
                     onChange={(e) => setNewRoomPassword(e.target.value)}
                 ></input>
 
-                <button className={`create-room-button ${newRoomName != "" ? "active" : ""}`}>Create Room</button>
+                <button className={`create-room-button ${newRoomName != "" && (checked ? newRoomPassword != "" : false) ? "active" : ""}`}>
+                    Create Room
+                </button>
             </div>
         </>
     );

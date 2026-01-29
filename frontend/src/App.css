@@ -138,6 +138,7 @@
     background-color: rgb(244, 218, 248);
 }
 .create-room-button.open {
+    opacity: 1;
     margin-top: 10px;
     gap: 6px;
     padding: 6px 10px;
